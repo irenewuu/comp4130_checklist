@@ -1,0 +1,47 @@
+.main{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+}
+.input{
+  width:60%;
+  display: flex;
+  justify-content: center;
+}
+.text{
+  width:80%;
+  height:20px;
+}
+.btn{
+  width:20%;
+  height:26px;
+}
+.sortbox{
+  width:60%;
+  display:flex;
+  flex-direction: row;
+  border-bottom: 1px solid #C2C2C2;
+}
+.sortbox > img{
+  margin:10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .input{
+    width:60%;
+    display: flex;
+    justify-content: center;
+  }
+  .text{
+    width:65%;
+    height:20px;
+  }
+  .btn{
+    width:30%;
+    height:26px;
+  }
+}
