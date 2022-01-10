@@ -52,6 +52,9 @@ function newElement() {
     close[i].onclick = function () {
       data.splice(myNodelist[i], 1);
       console.log(data)
+      // added display none after closing the items
+      var div = this.parentElement;
+      div.style.display = "none";
     }
   }
 }
