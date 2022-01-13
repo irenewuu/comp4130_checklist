@@ -59,6 +59,7 @@ form > span {
 .sortBox {
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
 
 .sortBox > img {
