@@ -75,3 +75,29 @@ function newElement() {
       }
     }
 }
+
+// sorting function
+function sortList() {
+  var list, i, switching, listValue, shouldSwitch;
+  list = document.getElementById("NewList");
+  switching = true;
+  // Make a loop that will continue until no switching has been done 
+  while (switching) {
+    switching = false;
+    listValue = list.getElementsByTagName("LI");
+    // all list items
+    for (i = 0; i < (listValue.length - 1); i++) {
+      shouldSwitch = false;
+      // check alphabetical order
+      if (listValue[i].innerHTML.toLowerCase() > listValue[i + 1].innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      // for switching
+      listValue[i].parentNode.insertBefore(listValue[i + 1], listValue[i]);
+      switching = true;
+    }
+  }
+}
