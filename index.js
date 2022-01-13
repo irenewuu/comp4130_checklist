@@ -16,13 +16,21 @@ function newElement() {
   span.appendChild(spanText);
   li.appendChild(span);
 
-
   // delete img
   var bin = document.createElement("img");
   bin.src = "image/iconly/bold/delete.svg";
   bin.className = "close";
   li.appendChild(bin);
 
+  // change color of delete img when hovering
+  bin.onmouseleave = function() {
+    this.src = "image/iconly/bold/delete.svg";
+  }
+  bin.onmouseover = function() {
+    this.src = "image/iconly/bold/delete-hover.svg";
+  }
+
+  // show error message or add list
   if (inputValue === '') {
     alert("You must write something!");
     data.push()
@@ -60,18 +68,15 @@ function newElement() {
       }
     }
 
-
     for (var i = 0; i < listItem.length; i++) {
       listItem[i].onclick = function () {
        // Add a "checked" symbol when clicking on a list item
         var list = document.querySelector('ul');
         list.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'LI') {
-          ev.target.classList.toggle('checked');
-      
-        }
-  
-  }, false);
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');      
+          }  
+        }, false);
       }
     }
 }
