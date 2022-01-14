@@ -27,7 +27,7 @@ function newElement() {
   }
   bin.onmouseover = function() {
     this.src = "image/iconly/bold/delete-hover.svg";
-  }
+  }  
 
   // show error message or add list: irene ===========================================
   if (inputValue === '') {
@@ -70,6 +70,18 @@ function newElement() {
         }, false);
       }
     }
+
+  // change color of list background color when hovering: younsoo ================
+  for (var i = 0; i < listItem.length; i++) { 
+    listItem[i].onmouseleave = function() {
+      this.classList.remove("hover");
+    }  
+    listItem[i].onmouseover = function() {      
+      if(this.className != "checked"){
+        this.classList.add("hover");
+      }
+    }
+  }    
 }
 
 // sorting function: hyerin =========================================================
