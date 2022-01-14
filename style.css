@@ -45,8 +45,6 @@ form > span {
 }
 .sortCont {
   width: 60%;
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
   /* flex-direction: row; */
   border-bottom: 1px solid #c2c2c2;
   margin-top: 20px;
