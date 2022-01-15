@@ -105,6 +105,16 @@ function sortList() {
     if (activateSwitch) {
       // for switching
       listValue[i].parentNode.insertBefore(listValue[i + 1], listValue[i]);
+
+      // sorting the array as well
+      data.sort(function(a, b){
+        if(a.value < b.value) { return -1; }
+        if(a.value > b.value) { return 1; }
+        return 0;
+      })
+
+      console.log(data)
+
       switching = true;
     }
   }
