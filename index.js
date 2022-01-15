@@ -86,7 +86,7 @@ function newElement() {
 
 // sorting function: hyerin =========================================================
 function sortList() {
-  var list, i, switching, listValue, shouldSwitch;
+  var list, i, switching, listValue, activateSwitch;
   list = document.getElementById("NewList");
   switching = true;
   // Make a loop that will continue until no switching has been done 
@@ -95,14 +95,14 @@ function sortList() {
     listValue = list.getElementsByTagName("LI");
     // all list items
     for (i = 0; i < (listValue.length - 1); i++) {
-      shouldSwitch = false;
+      activateSwitch = false;
       // check alphabetical order
       if (listValue[i].innerHTML.toLowerCase() > listValue[i + 1].innerHTML.toLowerCase()) {
-        shouldSwitch = true;
+        activateSwitch = true;
         break;
       }
     }
-    if (shouldSwitch) {
+    if (activateSwitch) {
       // for switching
       listValue[i].parentNode.insertBefore(listValue[i + 1], listValue[i]);
       switching = true;
